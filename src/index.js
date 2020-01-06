@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './components/App/App';
+import {BrowserRouter} from  'react-router-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+export const MyContext = React.createContext();
+
+const app = (
+  <MyContext.Provider value='hello world 3424'>
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
+  </MyContext.Provider>
+);
+
+ReactDOM.render(app, document.getElementById('root'));
+
