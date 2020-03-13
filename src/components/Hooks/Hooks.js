@@ -45,7 +45,7 @@ const Hooks = () => {
   }, [someValue]);
 
   return(
-    <div style={{height: '100vh', backgroundColor: color}} >
+    <div style={{ backgroundColor: color}} >
       <Button onClick={handleColor} variant="contained" color="primary">change color</Button>
       <Button onClick={() => setFontSize((s) => parseInt(s) + 1 + 'px')} variant="contained" color="primary" style={{fontSize: fontSize}}>increase font size</Button>
       <Button variant="contained" color="primary">{value}</Button>

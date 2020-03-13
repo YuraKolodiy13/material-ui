@@ -1,0 +1,48 @@
+.faq{
+  max-width: 100%;
+  width: 1360px;
+  padding: 0 8px 80px;
+  margin: 0 auto;
+  display: flex;
+  .page-navigation {
+    position: relative;
+    width: 224px;
+    text-align: left;
+    padding: 0 8px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    a{
+      padding: 8px;
+      border-bottom: 1px solid rgba(13, 14, 83, 0.15);
+      display: block;
+      font-weight: 500;
+      text-decoration: none;
+      position: relative;
+      color: #2A3E47;
+      font-family: "Proxima Nova";
+      font-size: 12px;
+      line-height: 18px;
+      transition: .3s;
+      &.active{
+        background-color: #007EA7;
+        color: #FFFFFF;
+        font-weight: 600;
+      }
+    }
+    &.sticky-to-top {
+      position: fixed;
+      top: 20px;
+    }
+    &.sticky-to-bottom {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+    }
+  }
+  .group-search-result-block {
+    align-content: flex-start;
+    width: calc(100% - 224px);
+    text-align: left;
+    margin-left: auto;
+  }
+}
